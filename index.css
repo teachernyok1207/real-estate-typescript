@@ -1,0 +1,144 @@
+*{
+    --header: #964B00;
+    --headerText: #FFFFFF;
+    --button: #026402;
+    --buttonHover: #029702;
+    --footer: #AE5802;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial;
+    color: rgb(169,169,169);
+    flex-direction: column;
+    
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-image{
+    position: relative;
+    display: flex;
+    margin-top: 0px;
+    animation: fadeIn 2s ease-in;
+}
+
+.welcome-note{
+    position: absolute;
+    color: var(--header);
+    margin-top: 30%;
+    font-size: 5vw;
+    animation-name: zoomIn;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }100%{
+        opacity: 100%;
+    }
+}
+
+@keyframes zoomIn{
+    0%{
+        transform: scale(0,0);
+    }100%{
+        transform: scale(1,1);
+    }
+}
+
+.container {
+    margin: 0px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container img {
+    width: 100%;
+}
+
+.nav-bar {
+    width: 100%;
+    position: sticky;
+    background-color: var(--header);
+    box-shadow: rgb(0 0 0 / 12%) 0 1px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('images/real-estate-logo.png');
+    margin: 20px;
+}
+
+.user-container {
+    margin: 20px;
+    color: var(--headerText);
+}
+
+.properties {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    width: 150px;
+    margin: 5px;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgb(0 0 0 / 12%) 0 1px 8px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.footer {
+    margin-top: 10px;
+    width: 100%;
+    background-color: var(--footer);
+    text-align: center;
+    padding: 30px 0;
+    color: rgb(255,255,255);
+}
+
+.review-card {
+    padding: 10px;
+}
+
+.reviews {
+    display: flex;
+    padding: 10px;
+}
+
+.break {
+    height: 1px;
+    width: 90%;
+    background-color: rgb(255,127,80);
+}
+
+button {
+    background-color: var(--button);
+    color: rgb(255,255,255);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;    
+}
+
+button:hover {
+    background-color: var(--buttonHover);
+}
